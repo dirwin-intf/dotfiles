@@ -28,26 +28,31 @@ urlcolor: KanagawaLink
   - reduced duplicate code
 
   - restructured main file (splinter.js) to increase readability and extensibility
-  
+
 * [created -r flag](https://github.com/interfolio/splinter/pull/10)
 
   - easier tracking of flakey/broken tests between testrail and jira
 
 ### E2E-TEST
 
-* [InterfolioHttpClient](https://github.com/interfolio/e2e-test/pull/1228) 
+* [InterfolioHttpClient](https://github.com/interfolio/e2e-test/pull/1228)
 
   - cleaner implementation of api client, allows for multiple concurrent sessions to be open
 
   - opened the door for cleaner integration layer for e2e UI tests
 
+* [cleanup-hook](https://github.com/Interfolio/e2e-test/pull/1237)
+
+  - hook that works in conjunction with InterfolioHttpClient to clean up created data
+    after a test completes running
+
 ### TEAM QUALITY OF LIFE
 
 * created helper scripts to make release process and data management easier for team
 
-  - [generate-rerun-command](https://github.com/interfolio/e2e-test/pull/1063) 
+  - [generate-rerun-command](https://github.com/interfolio/e2e-test/pull/1063)
 
-    + takes testrail run id and creates a bot-test command based off the failing tests 
+    + takes testrail run id and creates a bot-test command based off the failing tests
         and run summary (env, app, etc)
 
   - [clean-faculty-lm](https://github.com/interfolio/e2e-test/pull/1228)
@@ -57,6 +62,10 @@ urlcolor: KanagawaLink
   - [validate-user-credentials](https://github.com/Interfolio/e2e-test/pull/1233)
 
     + validates users in user-pool.js to make sure the credentials are all working
+
+  - [regenerate-home-items](https://github.com/Interfolio/e2e-test/pull/1240)
+
+    + regenerates all home items for a set of test users
 
 * created shared outlook calender (*autobots ooo*) to help keep better track of out of office
   events for team members
