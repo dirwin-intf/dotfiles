@@ -1,6 +1,6 @@
 #!/bin/bash
 VIM="$HOME/.vim"
 
-cp ./vim/vimrc $VIM/
+cp -r ./vim/ $VIM/
 cp .bashrc $HOME/
 cp .bash_aliases $HOME/
