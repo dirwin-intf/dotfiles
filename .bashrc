@@ -8,6 +8,9 @@ export HOMEBREW_PREFIX="/usr/local";
 export HOMEBREW_CELLAR="/usr/local/Cellar";
 export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
 
+# makefile completion
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+
 # nvm stuff
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
