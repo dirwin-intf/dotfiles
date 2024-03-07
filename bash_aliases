@@ -7,6 +7,7 @@ alias e2e="push ~/dev/e2e-test"
 alias xena="push ~/dev/xena"
 alias dotfiles="push ~/dotfiles"
 alias splinter="push ~/dev/splinter"
+alias bots="push ~/dev/intf-bots"
 
 alias gs="git status"
 alias ga="git add"
