@@ -17,8 +17,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # pull in aliases/custom functions
-source ~/.bash_aliases
-source ~/dotfiles/git-prompt.sh
+source $HOME/.bash_aliases
+source $HOME/dotfiles/scripts/git-prompt.sh
 
 # terminal prompt
 export PS1='[\[\e[38;5;227m\]\@\[\e[0m\]]\[\e[38;5;147m\]\u\[\e[38;5;231m\]@\[\e[0m\](\[\e[38;5;48m\]\h\[\e[0m\]:\[\e[38;5;123m\]\w\[\e[0m\]$(__git_ps1 "|󰘬 %s"))\n  > '
