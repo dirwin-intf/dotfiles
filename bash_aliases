@@ -1,3 +1,4 @@
+shopt -s expand_aliases
 alias ll="ls -Gla"
 alias la="ls -Gpa"
 alias l="ls -Gp"
@@ -15,6 +16,9 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gco="git checkout"
 alias cherry="git cherry-pick"
+
+alias ts="tmux switchc -t"
+alias ta="tmux attach -t"
 
 alias mdps="docker ps --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}\""
 alias clearDocker="docker system prune --volumes"
