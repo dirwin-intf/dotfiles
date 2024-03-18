@@ -19,6 +19,10 @@ export NVM_DIR="$HOME/.nvm"
 # pull in aliases/custom functions
 source $HOME/.bash_aliases
 source $HOME/dotfiles/scripts/git-prompt.sh
+source $HOME/dotfiles/scripts/git-completion.bash
+
+# git checkout (alias) tab completion
+__git_complete gco git_checkout
 
 # terminal prompt
 export PS1='[\[\e[38;5;227m\]\@\[\e[0m\]]\[\e[38;5;147m\]\u\[\e[38;5;231m\]@\[\e[0m\](\[\e[38;5;48m\]\h\[\e[0m\]:\[\e[38;5;123m\]\w\[\e[0m\]$(__git_ps1 "|󰘬 %s"))\n  > '
