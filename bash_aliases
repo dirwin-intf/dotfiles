@@ -90,3 +90,7 @@ function whoWrote {
 function skipThese {
   grep --include *.feature -rl -E "$1" . | xargs sed -i "" -E "s/($1)/\1 @$2-skip/g"
 }
+
+function vime {
+  searchHere $1 | sed -E 's/(\.\/[a-zA-Z\/\-]+.*.js:[0-9]+)(:.*)/\1/g' | sed -E 's/:/|/g'
+}
