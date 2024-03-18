@@ -1,6 +1,10 @@
 " be iMproved
 set nocompatible
 
+" use bash as shell for :!
+set shell=/bin/bash
+let $BASH_ENV = "~/.bash_aliases"
+
 " stop making swap files
 set nobackup
 set noswapfile
