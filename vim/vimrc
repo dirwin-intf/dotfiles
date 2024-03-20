@@ -146,6 +146,7 @@ nnoremap <leader>an :ALENext <cr>
 nnoremap <leader>aN :ALEPrevious <cr>
 
 command JsonFormat :%!python3 -m json.tool
+command Src :source ~/.vim/vimrc
 
 " Relative or absolute number lines
 function! NumberToggle()
