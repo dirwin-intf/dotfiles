@@ -1,3 +1,15 @@
+" Table of Contents                                                vimrc
+"
+" 1. Base Configuration ........................................ rc_base
+" 2. Remaps .................................................. rc_remaps
+" 3. Plugins ................................................ rc_plugins
+" 4. ColorScheme settings ...................... rc_colorscheme_settings
+" 5. Other plugin settings .................... rc_other_plugin_settings
+" 3. Auto commands ......................................... rc_autocmds
+"
+" ======================================================================
+"                                                                rc_base
+
 " be iMproved
 set nocompatible
 
@@ -63,7 +75,9 @@ set shiftwidth=2
 filetype indent plugin on
 syntax on
 
-" [remaps]
+" ======================================================================
+"                                                              rc_remaps
+
 " set leader key to spacebar for easy access
 let mapleader="\<Space>"
 
@@ -128,10 +142,11 @@ function! NumberToggle()
         set rnu
     endif
 endfunction
-
 nnoremap ~ :call NumberToggle()<CR>
 
-" plugins
+" ======================================================================
+"                                                             rc_plugins
+
 call plug#begin()
 
 " colorschemes and themes
@@ -174,6 +189,9 @@ Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
+" ======================================================================
+"                                                rc_colorscheme_settings
+
 " everforest settings
 let g:everforest_background = 'medium'
 let g:everforest_ui_contrast = 'high'
@@ -189,6 +207,9 @@ let g:seoul256_background = 235
 
 " colorscheme settings
 colorscheme embark
+
+" ======================================================================
+"                                               rc_other_plugin_settings
 
 " ale settings
 let g:ale_fixers = {
@@ -206,9 +227,26 @@ let g:airline_section_z = '%l/%L : %c'
 " closetags options
 let g:closetag_filetypes = 'html,vue'
 
-" if nerd tree is the last buffer, exit vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" ======================================================================
+"                                                            rc_autocmds
 
-" prevent folds from opening when fdm=syntax https://stackoverflow.com/questions/4630892/vim-folds-open-up-when-giving-an-unmatched-opening-brace-parenthesis
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+" if nerd tree is the last buffer, exit vim
+autocmd bufenter * if (winnr("$") == 1
+  \ && exists("b:NERDTree")
+  \ && b:NERDTree.isTabTree())
+  \ | q
+  \ | endif
+
+" prevent folds from opening when fdm=syntax
+" https://stackoverflow.com/questions/4630892/vim-folds-open-up-when-giving-an-unmatched-opening-brace-parenthesis
+autocmd InsertEnter * if !exists('w:last_fdm')
+  \ | let w:last_fdm=&foldmethod
+  \ | setlocal foldmethod=manual
+  \ | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm')
+  \ | let &l:foldmethod=w:last_fdm
+  \ | unlet w:last_fdm
+  \ | endif
+
+" set bash_aliases (unhidden) filetype to sh for syntax highlighting
+autocmd bufread bash_aliases setlocal ft=sh
