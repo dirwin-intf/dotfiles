@@ -19,6 +19,9 @@ alias cherry="git cherry-pick"
 
 alias ts="tmux switchc -t"
 alias ta="tmux attach -t"
+alias tl="tmux ls"
+alias td="tmux det"
+alias tk9="tmux kill-server"
 
 alias mdps="docker ps --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}\""
 alias clearDocker="docker system prune --volumes"
@@ -30,6 +33,8 @@ alias searchHere="grep . --exclude-dir \"node_modules\" --exclude-dir \".git\" -
 alias ifmfa='awsmfa --identity-profile interfolio --target-profile interfolio-mfa -c $(op get totp '\''Amazon (interfolio)'\'')'
 alias awslgn='awsmfa --identity-profile interfolio --target-profile intf-cicd-mfa && awsmfa --identity-profile interfolio --target-profile interfolio-mfa'
 alias dkrlgn='aws --profile intf-cicd-mfa ecr get-login-password | docker login --username AWS --password-stdin 013320755112.dkr.ecr.us-east-1.amazonaws.com/interfolio'
+
+alias work='tmux new -s dotfiles -c ~/dotfiles/ \; det && tmux new -s xena -c ~/dev/xena/ \; det && tmux new -s e2e -c ~/dev/e2e-test/ \; det && tmux new -s default'
 
 function countRequires {
   files=$(searchHere "require\(.*\)$1\(.*\)")
