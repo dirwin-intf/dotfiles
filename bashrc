@@ -1,3 +1,6 @@
+# use vi keybindings
+set -o vi
+
 # path stuff
 export PATH="/Library/TeX/texbin:/usr/local/bin:/usr/local/sbin${PATH+:$PATH}";
 export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:";
