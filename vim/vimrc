@@ -96,14 +96,15 @@ vnoremap k kzz
 nnoremap n nzz
 nnoremap N Nzz
 
-" escape modes with jk (highly unlikely to type this digraph whilst programming, plus your fingers should always be over it, plus "just kidding")
+" escape modes with jk (highly unlikely to type this digraph whilst
+" programming, plus your fingers should always be over it
 inoremap jk <esc>
 cnoremap jk <esc>
 
-"
+" make Y behave like D
 nnoremap Y y$
 
-" movement
+" window split movement
 nnoremap <leader>wh <c-w>h
 nnoremap <leader>wj <c-w>j
 nnoremap <leader>wk <c-w>k
