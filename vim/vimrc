@@ -95,6 +95,8 @@ vnoremap j jzz
 vnoremap k kzz
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap G Gzz
+nnoremap gg ggzz
 
 " escape modes with jk (highly unlikely to type this digraph whilst
 " programming, plus your fingers should always be over it
