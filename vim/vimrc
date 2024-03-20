@@ -208,6 +208,16 @@ let g:gruvbox_contrast_dark = 'hard'
 " seoul256 settings
 let g:seoul256_background = 235
 
+" papercolor settings
+let g:PaperColor_Theme_Options = {
+\  'theme': {
+\    'default': {
+\      'allow_italic': 1,
+\      'allow_bold': 1,
+\    }
+\  }
+\}
+
 " colorscheme settings
 colorscheme embark
 
