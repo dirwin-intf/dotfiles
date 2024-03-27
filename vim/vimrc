@@ -106,17 +106,24 @@ nnoremap G Gzz
 nnoremap gg ggzz
 
 " resize panes
-nnoremap H :vertical resize -1 <cr>
-nnoremap J :resize -1 <cr>
-nnoremap K :resize +1 <cr>
-nnoremap L :vertical resize +1 <cr>
-nnoremap <C-H> :vertical resize -5 <cr>
-nnoremap <C-J> :resize -5 <cr>
-nnoremap <C-K> :resize +5 <cr>
-nnoremap <C-L> :vertical resize +5 <cr>
+" nnoremap <A-H> :vertical resize -1 <cr>
+" nnoremap <A-J> :resize -1 <cr>
+" nnoremap <A-K> :resize -1 <cr>
+" nnoremap <A-L> :resize -1 <cr>
+nnoremap ˙ :vertical resize -1 <cr>
+nnoremap ∆ :resize -1 <cr>
+nnoremap ˚ :resize +1 <cr>
+nnoremap ¬ :vertical resize +1 <cr>
+" nnoremap <A-S-H> :vertical resize -5 <cr>
+" nnoremap <A-S-J> :resize -5 <cr>
+" nnoremap <A-S-K> :resize +5 <cr>
+" nnoremap <A-S-L> :vertical resize +5 <cr>
+nnoremap Ó :vertical resize -5 <cr>
+nnoremap Ô :resize -5 <cr>
+nnoremap  :resize +5 <cr>
+nnoremap Ò :vertical resize +5 <cr>
 
-" escape modes with jk (highly unlikely to type this digraph whilst
-" programming, plus your fingers should always be over it
+" escape modes with jk
 inoremap jk <esc>
 cnoremap jk <esc>
 
