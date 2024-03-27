@@ -163,6 +163,10 @@ nnoremap <leader>aN :ALEPrevious <cr>
 command JsonFormat :%!python3 -m json.tool
 command Src :source ~/.vim/vimrc
 
+" ycm
+nnoremap <leader>d :vsplit <bar> YcmCompleter GoToDefinition <cr>
+nnoremap <leader>D :split <bar> YcmCompleter GoToDefinition <cr>
+
 " open .env file
 function! OpenEnv()
   if(bufexists(bufname('.env'))
