@@ -75,6 +75,9 @@ set tabstop=2
 set sts=2
 set shiftwidth=2
 
+" reuse splits
+set switchbuf=useopen
+
 " prettify my text
 filetype indent plugin on
 syntax on
@@ -152,6 +155,17 @@ nnoremap <leader>aN :ALEPrevious <cr>
 
 command JsonFormat :%!python3 -m json.tool
 command Src :source ~/.vim/vimrc
+
+" open .env file
+function! OpenEnv()
+  if(bufexists(bufname('.env'))
+    \ && index(tabpagebuflist(), bufnr(bufname('.env'))) >=0)
+    sb env
+  else
+    botright vsp .env | vertical resize 30 | set winfixwidth
+  endif
+endfunction
+nnoremap <leader>e :call OpenEnv()<cr>
 
 " Relative or absolute number lines
 function! NumberToggle()
