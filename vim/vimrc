@@ -123,6 +123,10 @@ nnoremap Ô :resize -5 <cr>
 nnoremap  :resize +5 <cr>
 nnoremap Ò :vertical resize +5 <cr>
 
+" shell mode
+nnoremap ! :!
+vnoremap !v y:!vime <C-r>"
+
 " escape modes with jk
 inoremap jk <esc>
 cnoremap jk <esc>
